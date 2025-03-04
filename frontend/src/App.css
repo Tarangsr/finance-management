@@ -1,0 +1,21 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden; /* Hides horizontal scrolling */
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+

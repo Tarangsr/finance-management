@@ -1,0 +1,209 @@
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  color: white;
+  padding: 60px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 1rem;
+  background: white;
+  color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background: #f4f4f9;
+}
+.home-container::before {
+  content: "";
+  position: absolute;
+  top: -500px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: url('/img/ai-generated-8779693_1280.jpg') no-repeat center center / cover;
+  background-size: cover;  /* Ensures the entire area is covered */
+  height: 2500px; /* Full viewport height */
+  width: 100vw;
+  z-index: -1;
+  opacity: 0.4;
+  filter: blur(3px);
+}
+
+#services {
+  display: flex;
+  justify-content: space-around; /* Ensures uniform spacing */
+  align-items: center; /* Align items vertically */
+  flex-wrap: wrap; /* Wraps items if needed on smaller screens */
+  padding: 20px;
+  gap: 20px; /* Adds uniform spacing between boxes */
+}
+
+.box {
+  border: 2px solid black;
+  background-color: wheat;
+  padding: 20px;
+  width: 30%; /* Ensures each box takes equal width */
+  text-align: center;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+/* Quick Links Section */
+.quick-links {
+text-align: center;
+margin: 40px auto;
+padding: 30px;
+background: #f8f9fa;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.quick-links h2 {
+font-size: 2rem;
+color: #007bff;
+margin-bottom: 20px;
+}
+
+.home-links {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 15px;
+}
+
+.home-link {
+display: inline-block;
+padding: 12px 20px;
+font-size: 1rem;
+font-weight: 600;
+color: white;
+background: #007bff;
+text-decoration: none;
+border-radius: 5px;
+transition: 0.3s ease-in-out;
+}
+
+.home-link:hover {
+background: #0056b3;
+transform: scale(1.05);
+}
+
+/* Testimonials Section */
+.testimonials {
+text-align: center;
+padding: 50px 20px;
+background: #f8f9fa;
+border-radius: 10px;
+}
+
+.testimonials h2 {
+font-size: 2rem;
+margin-bottom: 20px;
+color: #007bff;
+}
+
+/* Reviews Container */
+.reviews-container {
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+margin-top: 20px;
+}
+
+/* Individual Review Box */
+.test {
+background: white;
+border: 2px solid #007bff;
+border-radius: 10px;
+padding: 20px;
+max-width: 300px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease-in-out;
+}
+
+.test:hover {
+transform: scale(1.05);
+}
+
+.test p {
+font-size: 1.1rem;
+color: #333;
+margin: 10px 0;
+font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.reviews-container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.test {
+  width: 90%;
+}
+}
+/* Call to Action Section */
+.cta-section {
+text-align: center;
+padding: 50px 20px;
+background: #007bff;
+color: white;
+border-radius: 10px;
+margin: 40px auto;
+max-width: 800px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta-section h2 {
+font-size: 2.5rem;
+margin-bottom: 15px;
+}
+
+.cta-section p {
+font-size: 1.2rem;
+margin-bottom: 20px;
+}
+
+.cta-button {
+display: inline-block;
+background: white;
+color: #007bff;
+padding: 12px 25px;
+font-size: 1.2rem;
+font-weight: bold;
+border-radius: 8px;
+text-decoration: none;
+transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+background: #0056b3;
+color: white;
+}
