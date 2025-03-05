@@ -8,8 +8,6 @@ const Profile: React.FC = () => {
     email: "",
     phone: "",
     currency: "USD",
-    oldPassword: "",
-    newPassword: "",
   });
 
   const [showConfirm, setShowConfirm] = useState(false);
@@ -24,7 +22,9 @@ const Profile: React.FC = () => {
     JPY: 150.4,
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
 
     if (e.target.name === "currency") {
@@ -51,14 +51,25 @@ const Profile: React.FC = () => {
     <div className="profile-container">
       <h2 className="pf">Profile</h2>
       <div className="header-summary">
-        <div className="summary-item">Expenses: {balance.toFixed(2)} {form.currency}</div>
-        <div className="summary-item">Income: {balance.toFixed(2)} {form.currency}</div>
-        <div className="summary-item">Balance: {balance.toFixed(2)} {form.currency}</div>
+        <div className="summary-item">
+          Expenses: {balance.toFixed(2)} {form.currency}
+        </div>
+        <div className="summary-item">
+          Income: {balance.toFixed(2)} {form.currency}
+        </div>
+        <div className="summary-item">
+          Balance: {balance.toFixed(2)} {form.currency}
+        </div>
       </div>
 
       <div className="profile-form">
         <label>Preferred Currency</label>
-        <select name="currency" value={form.currency} onChange={handleChange} className="full-width">
+        <select
+          name="currency"
+          value={form.currency}
+          onChange={handleChange}
+          className="full-width"
+        >
           <option value="USD">USD - US Dollar</option>
           <option value="EUR">EUR - Euro</option>
           <option value="GBP">GBP - British Pound</option>
@@ -67,26 +78,44 @@ const Profile: React.FC = () => {
         </select>
 
         <label>Name</label>
-        <input type="text" name="name" value={form.name} onChange={handleChange} className="full-width" placeholder="Enter your name"/>
+        <input
+          type="text"
+          name="name"
+          value={form.name}
+          onChange={handleChange}
+          className="full-width"
+          placeholder="Enter your name"
+        />
 
         <label>Gender</label>
-        <input type="text" name="name" value={form.name} onChange={handleChange} className="full-width" placeholder="Enter your gender"/>
+        <input
+          type="text"
+          name="name"
+          value={form.name}
+          onChange={handleChange}
+          className="full-width"
+          placeholder="Enter your gender"
+        />
 
         <label>Email</label>
-        <input type="email" name="email" value={form.email} onChange={handleChange} className="full-width" placeholder="Enter your email-address"/>
+        <input
+          type="email"
+          name="email"
+          value={form.email}
+          onChange={handleChange}
+          className="full-width"
+          placeholder="Enter your email-address"
+        />
 
         <label>Phone Number</label>
-        <input type="tel" name="phone" value={form.phone} onChange={handleChange} className="full-width" placeholder="Enter your phone-no."/>
-
-        <div className="password-section">
-          <label>Old Password</label>
-          <input type="password" name="oldPassword" value={form.oldPassword} onChange={handleChange} className="full-width" />
-
-          <label>New Password</label>
-          <input type="password" name="newPassword" value={form.newPassword} onChange={handleChange} className="full-width" />
-
-          <button className="save-password-btn full-width">Save New Password</button>
-        </div>
+        <input
+          type="tel"
+          name="phone"
+          value={form.phone}
+          onChange={handleChange}
+          className="full-width"
+          placeholder="Enter your phone-no."
+        />
       </div>
 
       <div className="action-buttons">
@@ -94,25 +123,38 @@ const Profile: React.FC = () => {
       </div>
 
       <div className="logout-section">
-        <button className="logout-btn" onClick={handleLogout}>Logout</button>
+        <button className="logout-btn" onClick={handleLogout}>
+          Logout
+        </button>
       </div>
-      
+
       <div className="delete-section">
-        <button className="delete-btn" onClick={handleDeleteClick}>Delete Account</button>
+        <button className="delete-btn" onClick={handleDeleteClick}>
+          Delete Account
+        </button>
       </div>
 
       {showConfirm && (
         <div className="modal">
-          <p>Are you sure you want to delete your account? This action cannot be undone.</p>
-          <button className="save-btn" onClick={confirmDeleteAccount}>Confirm</button>
+          <p>
+            Are you sure you want to delete your account? This action cannot be
+            undone.
+          </p>
+          <button className="save-btn" onClick={confirmDeleteAccount}>
+            Confirm
+          </button>
         </div>
       )}
 
       <section className="lastquote">
         <p>
-          "In the end, our wealth is not measured by what we own, but by the quality of our choices and the impact they have on those around us....."
+          "In the end, our wealth is not measured by what we own, but by the
+          quality of our choices and the impact they have on those around
+          us....."
         </p>
-        <p className="writer">– Inspired by Mahatma Gandhi and modern social entrepreneurship.</p>
+        <p className="writer">
+          – Inspired by Mahatma Gandhi and modern social entrepreneurship.
+        </p>
       </section>
     </div>
   );

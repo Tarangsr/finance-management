@@ -1,6 +1,6 @@
 /* navbar.css */
 .navbar {
-  width: 100vw;  /* Full viewport width */
+  width: 100vw; /* Full viewport width */
   right: 0;
   top: 0px;
   position: absolute;
@@ -53,8 +53,23 @@
   transition: color 0.3s ease-in-out;
 }
 
+.nav-links li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a.active {
+  /*background-color: #007bff; /* Change to your preferred highlight color */
+  color: rgb(235, 239, 33);
+  font-weight: bold;
+}
+
 .nav-links a:hover {
-  color: #ff007b; /* Yellow hover effect */
+  color: #98eaea; /* Yellow hover effect */
+  font-weight: bold;
 }
 
 /* Responsive Design */
@@ -73,5 +88,23 @@
 
 /* Hide Navbar when Sidebar is Open */
 .sidebar.open ~ .flex-1 .navbar {
-display: none;
+  display: none;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 40px; /* Adjust size */
+  width: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
 }

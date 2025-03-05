@@ -80,14 +80,14 @@
     
 }
 
-h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, 
+/* h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, 
 p:hover, li:hover, label:hover, input:hover, textarea:hover, 
 select:hover {
   color: #48ec0d; /* Change text color on hover */
-  transform: scale(1.05); /* Slightly increase size */
-  cursor: pointer; /* Indicate interactivity */
-  transition: all 0.3s ease-in-out; /* Smooth transition */
-}
+  /*transform: scale(1.05); /* Slightly increase size */
+  /*cursor: pointer; /* Indicate interactivity */
+  /*transition: all 0.3s ease-in-out; /* Smooth transition 
+} */
 
 .dropdown-btn:hover {
     color: #000000; /* Change text color on hover */
@@ -171,15 +171,15 @@ select:hover {
   border: 2px solid black;
   /* filter: blur(1px); */
 }
-body {
+/* body { */
     /* height: 100vh; */
-    margin: 0;
+    /* margin: 0;
     background-image: url('/img/ai-generated-8490532_1280.jpg');
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: cover; */
     /* z-index: -1;
     opacity: 0.4;
     filter: blur(3px); */
-  }
+  /* } */
   

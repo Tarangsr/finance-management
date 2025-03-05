@@ -1,11 +1,19 @@
+// terms
 import React from "react";
 import "./terms.css";
 
 const TermsOfService: React.FC = () => {
   return (
-    <div className="terms-container">
+    <div className="terms-container"style={{
+      backdropFilter: "blur(30px)",
+      background: "rgba(0, 0, 0, 0.3)",
+      borderRadius: "10px",
+      padding: "50px",
+      paddingTop:"20px"
+     
+    }}>
       <h1>Terms of Service</h1>
-      <p>Last Updated: {new Date().toDateString()}</p>
+      <h6>Last Updated: {new Date().toDateString()}</h6>
 
       <h2>1. Introduction</h2>
       <p>Welcome to Finance Manager. By accessing or using our service, you agree to be bound by these terms.</p>

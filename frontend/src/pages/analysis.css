@@ -112,11 +112,11 @@
   height: 100px;
 }
 
- h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, p:hover, li:hover{
+ /* h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, p:hover, li:hover{
   color: #48ec0d; /* Change text color on hover */
-  transform: scale(1.05); /* Slightly increase size */
-  cursor: pointer; /* Indicate interactivity */
-}
+  /*transform: scale(1.05); /* Slightly increase size */
+  /*cursor: pointer; /* Indicate interactivity *
+} */
 
 .mainheading , .h-primary
 {

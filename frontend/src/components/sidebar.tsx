@@ -14,7 +14,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
   // Close sidebar when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node)) {
+      if (
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false); // Close sidebar
       }
     }
@@ -37,7 +40,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
         </button>
       )}
 
-      <aside ref={sidebarRef} className={`sidebar ${isOpen ? "open" : "closed"}`}>
+      <aside
+        ref={sidebarRef}
+        className={`sidebar ${isOpen ? "open" : "closed"}`}
+      >
         <div className="sidebar-header">
           <h2 className="sidebar-title">Dashboard</h2>
           <button className="close-btn" onClick={() => setIsOpen(false)}>

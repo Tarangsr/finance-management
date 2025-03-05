@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./homepage.css";
+import "./homephone.css";
 
 interface FAQItem {
   id: number;
@@ -44,7 +45,9 @@ const FAQ: React.FC = () => {
           <div className="faq-item" key={faq.id}>
             <button className="faq-question" onClick={() => toggleFAQ(idx)}>
               {faq.question}
-              <span className={`arrow ${openIndex === idx ? "open" : ""}`}>&#9662;</span>
+              <span className={`arrow ${openIndex === idx ? "open" : ""}`}>
+                &#9662;
+              </span>
             </button>
             {openIndex === idx && (
               <div className="faq-answer show">
@@ -65,13 +68,19 @@ const HomePage: React.FC = () => {
       <header className="hero">
         <h1>Welcome to BudgetSync...</h1>
         <p className="tagline">
-          Sync all your financial needs in one place! BudgetSync helps you track expenses, analyze spending patterns, and manage your budgets efficiently.
+          Sync all your financial needs in one place! BudgetSync helps you track
+          expenses, analyze spending patterns, and manage your budgets
+          efficiently.
         </p>
-        <p>
-          "At BudgetSync, we make managing money simple, smart, and stress-free. Take control of your finances and build a secure future with ease!" 🚀💰
-        </p>
-        <p>~Shivangi Sahay</p>
-        <p>Founder & CEO, BudgetSync</p>
+        <div className="tar1">
+          <p className="tar">
+            "At BudgetSync, we make managing money simple, smart, and
+            stress-free. Take control of your finances and build a secure future
+            with ease!"
+          </p>
+          <p className="tar">~Shivangi Sahay</p>
+          <p className="tar">Founder & CEO, BudgetSync</p>
+        </div>
         <Link to="/records" className="cta-button">
           Start Managing Finances
         </Link>
@@ -79,68 +88,100 @@ const HomePage: React.FC = () => {
 
       {/* Services Section */}
       <div id="services">
-        <div className="box">
-          <img src="ai-generated-8779693_1280.jpg" alt="About Us" />
+        <div className="box" id="b1">
           <h2 className="h-secondary center">About Us</h2>
           <p className="center">
-            💡 Managing money shouldn’t be a struggle. BudgetSync transforms financial chaos into clarity! Track your expenses, plan budgets, and unlock powerful insights—all in one place.
+            💡 Managing money shouldn’t be a struggle. BudgetSync transforms
+            financial chaos into clarity! Track your expenses, plan budgets, and
+            unlock powerful insights—all in one place. Whether you're saving for
+            the future, cutting down on unnecessary expenses, or simply wanting
+            a stress-free way to manage money, we’ve got you covered. Join
+            thousands of smart budgeters and take charge of your financial
+            journey today! 🚀💰
           </p>
         </div>
-        <div className="box">
-          <img src="ai-generated-8779693_1280.jpg" alt="Why Choose Us?" />
+        <div className="box" id="b2">
           <h2 className="h-secondary center">Why Choose Us?</h2>
           <div className="feature-grid">
             <div className="feature-item">
               <span>📊</span>
-              <h3>Expense Tracking</h3>
-              <p>Keep an eye on where your money goes with real-time tracking.</p>
+              <h3 className="sec">Expense Tracking</h3>
+              <p>
+                Keep an eye on where your money goes with real-time tracking.
+              </p>
             </div>
             <div className="feature-item">
               <span>💰</span>
-              <h3>Budget Planning</h3>
+              <h3 className="sec">Budget Planning</h3>
               <p>Set financial goals and stay on track with smart budgeting.</p>
             </div>
             <div className="feature-item">
               <span>📈</span>
-              <h3>Financial Analysis</h3>
-              <p>Gain insights into your spending habits and savings potential.</p>
+              <h3 className="sec">Financial Analysis</h3>
+              <p>
+                Gain insights into your spending habits and savings potential.
+              </p>
             </div>
             <div className="feature-item">
               <span>🔒</span>
-              <h3>Secure & Private</h3>
-              <p>Your financial data is protected with advanced security measures.</p>
+              <h3 className="sec">Secure & Private</h3>
+              <p>
+                Your financial data is protected with advanced security
+                measures.
+              </p>
             </div>
           </div>
         </div>
+
         <div className="box">
-          <img src="ai-generated-8779693_1280.jpg" alt="How It Works" />
           <h2 className="h-secondary center">How It Works</h2>
           <ul>
-            <li>Step 1: Sign up and create an account.</li>
-            <li>Step 2: Add your income and expenses.</li>
-            <li>Step 3: Set budgets and track spending.</li>
-            <li>Step 4: Analyze trends and optimize financial planning.</li>
+            <li>
+              Step 1: Sign up and create an account : Create your free account
+              in seconds and step into a world of seamless financial management
+            </li>
+            <li>
+              Step 2: Add your income and expenses : No more guesswork! Simply
+              log your transactions—every rupee earned and spent is tracked in
+              real-time.
+            </li>
+            <li>
+              Step 3: Set budgets and track spending : Define spending limits,
+              categorize expenses, and get notified when you're nearing your
+              budget goals. No more overspending!
+            </li>
+            <li>
+              Step 4: Analyze trends and optimize financial planning : Define
+              spending limits, categorize expenses, and get notified when you're
+              nearing your budget goals. No more overspending!
+            </li>
           </ul>
         </div>
       </div>
-
       {/* Testimonials Section */}
       <section className="testimonials">
         <h2>What Our Users Say</h2>
         <div className="reviews-container">
           <div className="test">
             <p>
-              "BudgetSync has transformed the way I manage my expenses. The insights help me stay on top of my budget!"
+              "BudgetSync has transformed the way I manage my expenses. The
+              insights help me stay on top of my budget!"
             </p>
-            <p>~Amit Sharma</p>
+            <p>~Amit Sharma, Senior Financial Analyst at HDFC Bank</p>
           </div>
           <div className="test">
-            <p>"I love how simple and intuitive BudgetSync is! Budgeting has never been this easy."</p>
-            <p>~Priya Verma</p>
+            <p>
+              "I love how simple and intuitive BudgetSync is! Budgeting has
+              never been this easy."
+            </p>
+            <p>~Priya Verma, Chartered Accountant at Deloitte</p>
           </div>
           <div className="test">
-            <p>"Secure, insightful, and user-friendly! BudgetSync keeps my finances in check effortlessly."</p>
-            <p>~Rahul Mehta</p>
+            <p>
+              "Secure, insightful, and user-friendly! BudgetSync keeps my
+              finances in check effortlessly."
+            </p>
+            <p>~Rahul Mehta, Product Manager at Paytm</p>
           </div>
         </div>
       </section>
@@ -149,8 +190,9 @@ const HomePage: React.FC = () => {
       <section className="cta-section">
         <h2>Ready to Take Control of Your Finances?</h2>
         <p>
-          Join thousands of smart budgeters who are saving more, spending wisely, and achieving financial freedom!
-          Budgeting has never been this simple.
+          Join thousands of smart budgeters who are saving more, spending
+          wisely, and achieving financial freedom! Budgeting has never been this
+          simple.
         </p>
         <Link to="/signup" className="cta-button">
           Sign Up Now
@@ -164,11 +206,21 @@ const HomePage: React.FC = () => {
       <section className="quick-links">
         <h2>Explore BudgetSync</h2>
         <div className="home-links">
-          <Link to="/records" className="home-link">Manage Records</Link>
-          <Link to="/analysis" className="home-link">Financial Analysis</Link>
-          <Link to="/budgets" className="home-link">Set Budgets</Link>
-          <Link to="/accounts" className="home-link">Manage Accounts</Link>
-          <Link to="/profile" className="home-link">Your Profile</Link>
+          <Link to="/records" className="home-link">
+            Manage Records
+          </Link>
+          <Link to="/analysis" className="home-link">
+            Financial Analysis
+          </Link>
+          <Link to="/budgets" className="home-link">
+            Set Budgets
+          </Link>
+          <Link to="/accounts" className="home-link">
+            Manage Accounts
+          </Link>
+          <Link to="/profile" className="home-link">
+            Your Profile
+          </Link>
         </div>
       </section>
     </div>

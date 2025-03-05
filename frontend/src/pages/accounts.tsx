@@ -19,7 +19,10 @@ const Accounts: React.FC = () => {
 
   const addAccount = () => {
     if (newType.trim() !== "" && newBalance !== "") {
-      setAccounts([...accounts, { type: newType, balance: parseFloat(newBalance) }]);
+      setAccounts([
+        ...accounts,
+        { type: newType, balance: parseFloat(newBalance) },
+      ]);
       setNewType("");
       setNewBalance("");
     }
@@ -28,11 +31,11 @@ const Accounts: React.FC = () => {
   return (
     <div className="container">
       <h2 className="title">Accounts</h2>
-      
+
       <div className="account-list">
         {accounts.map((account, index) => (
           <div key={index} className="account-box">
-            <div className="icon">📌</div> 
+            <div className="icon">📌</div>
             <div className="account-info">
               <h3>{account.type}</h3>
               <p className={account.balance < 0 ? "negative" : "positive"}>
@@ -45,21 +48,23 @@ const Accounts: React.FC = () => {
 
       <div className="form-container">
         <h3>Add New Account</h3>
-        <input 
-          type="text" 
-          placeholder="Account Type" 
-          value={newType} 
-          onChange={(e) => setNewType(e.target.value)} 
+        <input
+          type="text"
+          placeholder="Account Type"
+          value={newType}
+          onChange={(e) => setNewType(e.target.value)}
           className="input"
         />
-        <input 
-          type="number" 
-          placeholder="Initial Balance" 
-          value={newBalance} 
-          onChange={(e) => setNewBalance(e.target.value)} 
+        <input
+          type="number"
+          placeholder="Initial Balance"
+          value={newBalance}
+          onChange={(e) => setNewBalance(e.target.value)}
           className="input"
         />
-        <button onClick={addAccount} className="button">+ Add Account</button>
+        <button onClick={addAccount} className="button">
+          + Add Account
+        </button>
       </div>
     </div>
   );

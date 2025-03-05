@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import {
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Legend,
-  Tooltip, PieChart, Pie, Cell
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Legend,
+  Tooltip,
+  PieChart,
+  Pie,
+  Cell,
 } from "recharts";
 import "./analysis.css";
 
@@ -37,9 +45,24 @@ const App: React.FC = () => {
   ];
 
   const colors = [
-    "#4CAF50", "#F44336", "#2196F3", "#FF9800", "#9C27B0", "#009688",
-    "#795548", "#FFEB3B", "#E91E63", "#3F51B5", "#8BC34A", "#607D8B",
-    "#CDDC39", "#FF5722", "#03A9F4", "#00BCD4", "#673AB7", "#FFC107"
+    "#4CAF50",
+    "#F44336",
+    "#2196F3",
+    "#FF9800",
+    "#9C27B0",
+    "#009688",
+    "#795548",
+    "#FFEB3B",
+    "#E91E63",
+    "#3F51B5",
+    "#8BC34A",
+    "#607D8B",
+    "#CDDC39",
+    "#FF5722",
+    "#03A9F4",
+    "#00BCD4",
+    "#673AB7",
+    "#FFC107",
   ];
 
   return (
@@ -62,22 +85,27 @@ const App: React.FC = () => {
       <div className={`content ${sidebarOpen ? "content-shifted" : ""}`}>
         <section id="home">
           <h1 className="mainheading">Welcome to Analysis Page.....</h1>
-          <h1 className="h-primary">Data Speaks, We Listen – Your Financial Overview Awaits!</h1>
-          <p>“Do not save what is left after spending, but spend what is left after saving.”</p>
+          <h1 className="h-primary">
+            Data Speaks, We Listen – Your Financial Overview Awaits!
+          </h1>
+          <p>
+            “Do not save what is left after spending, but spend what is left
+            after saving.”
+          </p>
           <p className="writer"> – Warren Buffett</p>
         </section>
 
         {/* ✅ Fixed: Added missing isOpen useState */}
         <div className="dropdown">
-      <button className="dropdown-btn" onClick={() => setIsOpen(!isOpen)}>
-        📌 Notes Section {isOpen ? "▲" : "▼"}
-      </button>
-      {isOpen && (
-        <div className="dropdown-content show">
-          <textarea placeholder="Write your notes here..." />
+          <button className="dropdown-btn" onClick={() => setIsOpen(!isOpen)}>
+            📌 Notes Section {isOpen ? "▲" : "▼"}
+          </button>
+          {isOpen && (
+            <div className="dropdown-content show">
+              <textarea placeholder="Write your notes here..." />
+            </div>
+          )}
         </div>
-      )}
-    </div>
         <div className="charts-container">
           {/* Pie Chart Row */}
           <div className="chart-row">
@@ -118,7 +146,10 @@ const App: React.FC = () => {
                   label
                 >
                   {expenseCategories.map((_, index) => (
-                    <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={colors[index % colors.length]}
+                    />
                   ))}
                 </Pie>
                 <Tooltip />
@@ -129,24 +160,50 @@ const App: React.FC = () => {
           {/* Bar Chart Row */}
           <div className="chart-row">
             <div className="barchart1">
-              <BarChart width={500} height={300} data={financialData} barSize={20}>
-                <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} />
+              <BarChart
+                width={500}
+                height={300}
+                data={financialData}
+                barSize={20}
+              >
+                <XAxis
+                  dataKey="name"
+                  scale="point"
+                  padding={{ left: 10, right: 10 }}
+                />
                 <YAxis />
                 <Tooltip />
                 <Legend />
                 <CartesianGrid strokeDasharray="3 3" />
-                <Bar dataKey="users" fill="#8884d8" background={{ fill: "#eee" }} />
+                <Bar
+                  dataKey="users"
+                  fill="#8884d8"
+                  background={{ fill: "#eee" }}
+                />
               </BarChart>
             </div>
 
             <div className="barchart2">
-              <BarChart width={500} height={300} data={expenseCategories} barSize={20}>
-                <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} />
+              <BarChart
+                width={500}
+                height={300}
+                data={expenseCategories}
+                barSize={20}
+              >
+                <XAxis
+                  dataKey="name"
+                  scale="point"
+                  padding={{ left: 10, right: 10 }}
+                />
                 <YAxis />
                 <Tooltip />
                 <Legend />
                 <CartesianGrid strokeDasharray="3 3" />
-                <Bar dataKey="value" fill="#FF5733" background={{ fill: "#eee" }} />
+                <Bar
+                  dataKey="value"
+                  fill="#FF5733"
+                  background={{ fill: "#eee" }}
+                />
               </BarChart>
             </div>
           </div>
@@ -154,9 +211,12 @@ const App: React.FC = () => {
 
         <section className="lastquote">
           <p>
-            "True wealth does not lie in the things we acquire, but in the peace we find when we manage our resources wisely..."
+            "True wealth does not lie in the things we acquire, but in the peace
+            we find when we manage our resources wisely..."
           </p>
-          <p className="writer">– Inspired by Aristotle and modern financial wisdom.</p>
+          <p className="writer">
+            – Inspired by Aristotle and modern financial wisdom.
+          </p>
         </section>
       </div>
     </div>

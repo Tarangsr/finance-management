@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./contact.css";
+import "./contactphone.css";
 
 const ContactUs: React.FC = () => {
   const [form, setForm] = useState({ name: "", email: "", category: "Query", message: "" });
@@ -78,7 +79,6 @@ const ContactUs: React.FC = () => {
       <div className="chat">
       <p>"Hello, friend! 🚀 Got a question or just want to say hi? We're here to chat with you anytime! 💬" </p>
       <button type="submit" className="btn">Chat Now</button>
-
       </div>
     </div>
   );

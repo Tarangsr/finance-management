@@ -47,7 +47,6 @@
   position: relative; /* Ensures it’s above everything */
 }
 
-
 /* Sidebar Menu */
 .sidebar-menu {
   list-style: none;
@@ -83,7 +82,7 @@
   display: none;
 }
 
-.sidebar-title{
+.sidebar-title {
   color: #ffffff;
   margin-left: 20px;
   margin-top: 20px;

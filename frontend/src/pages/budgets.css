@@ -7,6 +7,7 @@
   max-width: 800px;
   margin: auto;
   text-align: center;
+  margin-top: 60px;
 }
 
 .budget-list {
@@ -64,8 +65,9 @@
   right: 0;
   bottom: 0;
 
-  background: url('/img/ai-generated-8490532_1280.png') no-repeat center center / cover;
-  background-size: cover;  /* Ensures the entire area is covered */
+  background: url("/img/ai-generated-8490532_1280.png") no-repeat center center /
+    cover;
+  background-size: cover; /* Ensures the entire area is covered */
   height: 2500px; /* Full viewport height */
   width: 100vw;
   z-index: -1;
@@ -73,21 +75,20 @@
   filter: blur(3px);
 }
 
-.bhu{
+.bhu {
   background-color: #7951e5;
   color: white;
 }
 
-.hk{
+.hk {
   color: black;
   font-size: 15px;
 }
 
-.head
-{
+.head {
   color: white;
 }
-.bhu:hover{
+.bhu:hover {
   cursor: pointer;
   transform: scale(1.05);
 }
@@ -95,6 +96,6 @@ h2 {
   color: #ffffff;
 }
 
-.lastquote{
+.lastquote {
   margin-top: 15px;
 }

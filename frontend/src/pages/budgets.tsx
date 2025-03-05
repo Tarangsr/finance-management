@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./budgets.css";
+import "./budgetsphone.css";
 
 interface Category {
   id: number;
