@@ -1,21 +1,26 @@
 Personal Finance Management
 
+Problem Statement 
+Managing personal finances efficiently is a challenge due to a lack of structured tracking tools. BudgetSync is a web-based Personal Finance Management Platform that helps users track, analyze, and manage their income, expenses, and transactions. The platform offers tools for budgeting, financial insights, and transaction organization, ensuring users can make informed financial decisions.
+
 📌 Project Overview
 Personal Finance Management is a MERN stack-based web application that helps users track their income and expenses, analyze financial trends, set budgets, and manage accounts efficiently.
 
-🚀 Features Implemented
-- **Records Management**: Track expenses and income by date and category.
-- **Financial Analysis**: Visual representation of spending patterns with charts.
-- **Budgeting**: Set and monitor category-wise budget limits.
-- **Account Management**: Manage cash, cards, and savings accounts.
-- **Custom Categories**: Add new income and expense categories.
-- **User Profile**: Manage user profile information.
-- **Contact Us**: Get in touch with the support team.
+🚀 **Features Implemented**  
+
+✔️ **Income & Expense Tracking** – Users can add, edit, and categorize income and expenses.  
+✔️ **Graphs & Visualizations** – Interactive charts display financial trends and expense breakdowns.  
+✔️ **CSV Import/Export** – Users can upload/download financial data for offline use.  
+✔️ **Transaction Management** – Search, filter, and sort transactions by date, category, or amount.  
+✔️ **User-Friendly Dashboard** – Displays key financial metrics such as income, expenses, and savings.  
+✔️ **Data Security & Authentication** – Secure user authentication and data storage.  
+✔️ **Notifications & Bill Reminders** – Alerts for upcoming payments and due bills.  
+✔️ **Financial Goal Setting** – Users can set savings goals and track progress.
 
 🌐 Github Link
 🔗 https://github.com/Sneha-0208/finance-management
 
-🛠️ Technologies Used
+🛠️ **Technologies Used**
 Frontend:
 React.js – For building the user interface
 TypeScript – For type safety and maintainability
