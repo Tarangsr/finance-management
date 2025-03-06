@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaEllipsisV } from "react-icons/fa";
-import "./categories.css";
+import "./CSS_primary/categories.css";
+import "./CSS_primary/categoriesphone.css";
 
 interface Category {
   name: string;
@@ -89,9 +90,7 @@ const Categories: React.FC = () => {
     <div className="container">
       <h2 className="heading">Income & Expense Categories</h2>
 
-      {/* Categories Container - Side by Side */}
       <div className="categories-container">
-        {/* Income Categories */}
         <div className="section income-section">
           <h3 className="section-title income-title">Income Categories</h3>
           <ul className="category-list">
@@ -129,7 +128,6 @@ const Categories: React.FC = () => {
           </ul>
         </div>
 
-        {/* Expense Categories */}
         <div className="section expense-section">
           <h3 className="section-title expense-title">Expense Categories</h3>
           <ul className="category-list">
@@ -168,7 +166,6 @@ const Categories: React.FC = () => {
         </div>
       </div>
 
-      {/* Add New Category Form */}
       <div className="form-container">
         <h3 className="form-title">Add New Category</h3>
         <form onSubmit={handleAddCategory} className="form">

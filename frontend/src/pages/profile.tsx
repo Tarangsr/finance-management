@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./profile.css";
+import "./CSS_primary/profile.css";
+import "./CSS_primary/profilephone.css";
 
 const Profile: React.FC = () => {
   const [form, setForm] = useState({
@@ -43,8 +44,8 @@ const Profile: React.FC = () => {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem("authToken"); // Clear authentication token
-    navigate("/login"); // Redirect to login page
+    localStorage.removeItem("authToken");
+    navigate("/login");
   };
 
   return (

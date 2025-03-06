@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./accounts.css";
+import "./CSS_primary/accounts.css";
 
 interface Account {
   type: string;

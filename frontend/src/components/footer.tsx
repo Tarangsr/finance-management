@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./footer.css";
+import "./CSS_comp/footer.css";
+import "./CSS_comp/navbarphone.css";
 
 const Footer: React.FC = () => {
   return (

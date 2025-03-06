@@ -1,6 +1,5 @@
-// privacy
 import React from "react";
-import "./privacy.css";
+import "./CSS_primary/privacy.css";
 
 const PrivacyPolicy: React.FC = () => {
   return (

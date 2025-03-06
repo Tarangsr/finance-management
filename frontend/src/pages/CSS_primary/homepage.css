@@ -4,8 +4,6 @@
   }
 }
 
-/* Hero Section */
-
 .hero {
   background: linear-gradient(to right, #007bff, #00c6ff);
   color: white;
@@ -56,11 +54,9 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Cover the full height of the parent */
-
+  height: 100%;
   background: url("/img/ai-generated-8779693_1280.jpg") no-repeat center center;
-  background-size: cover; /* Ensure the entire area is covered */
-
+  background-size: cover;
   z-index: -1;
   opacity: 0.4;
   filter: blur(3px);
@@ -68,30 +64,30 @@
 
 #services {
   display: flex;
-  justify-content: space-around; /* Ensures uniform spacing */
-  align-items: center; /* Align items vertically */
-  flex-wrap: wrap; /* Wraps items if needed on smaller screens */
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 20px;
-  gap: 20px; /* Adds uniform spacing between boxes */
+  gap: 20px;
 }
 
 #services1 {
   display: flex;
-  justify-content: space-around; /* Ensures uniform spacing */
-  align-items: center; /* Align items vertically */
-  flex-wrap: wrap; /* Wraps items if needed on smaller screens */
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 20px;
-  gap: 20px; /* Adds uniform spacing between boxes */
+  gap: 20px;
 }
 
 .box {
   border: 2px solid #007bff;
   background-color: white;
   padding: 20px;
-  width: 30%; /* Ensures each box takes equal width */
+  width: 30%;
   text-align: center;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
-  border-radius: 10px; /* Rounded corners */
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   color: black;
 }
 
@@ -100,7 +96,7 @@
   height: auto;
   border-radius: 10px;
 }
-/* Quick Links Section */
+
 .quick-links {
   text-align: center;
   margin: 40px auto;
@@ -146,7 +142,7 @@
 .feature-item p {
   font-size: 1.2rem;
 }
-/* Testimonials Section */
+
 .testimonials {
   text-align: center;
   padding: 50px 20px;
@@ -161,7 +157,6 @@
   color: #007bff;
 }
 
-/* Reviews Container */
 .reviews-container {
   display: flex;
   justify-content: center;
@@ -170,7 +165,6 @@
   margin-top: 20px;
 }
 
-/* Individual Review Box */
 .test {
   background: white;
   border: 2px solid #007bff;
@@ -192,7 +186,6 @@
   font-style: italic;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .reviews-container {
     flex-direction: column;
@@ -203,7 +196,7 @@
     width: 90%;
   }
 }
-/* Call to Action Section */
+
 .cta-section {
   text-align: center;
   padding: 50px 20px;
@@ -243,7 +236,6 @@
   color: white;
 }
 
-/* FAQ Section */
 .faq-section {
   max-width: 800px;
   margin: 40px auto;
@@ -331,10 +323,13 @@
   color: #007bff;
 }
 
-/* .center{
-  font-size: 15px;
- } */
-
 .sec {
   font-size: 15px;
+}
+
+.box:hover,
+.test:hover,
+.faq-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
 }

@@ -2,19 +2,20 @@
   display: flex;
   justify-content: space-between;
   gap: 80px;
-  /* background-color: black; */
 }
+
 .categories-container :hover {
   background-color: none;
 }
+
 .h2 :hover {
   color: white !important;
 }
+
 .income-section,
 .expense-section {
   width: 40%;
   padding: 2px;
-  /* background: #0a0000; */
   border-radius: 10px;
 }
 

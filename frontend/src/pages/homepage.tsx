@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./homepage.css";
-import "./homephone.css";
+import "./CSS_primary/homepage.css";
+import "./CSS_primary/homephone.css";
 
 interface FAQItem {
   id: number;
@@ -64,7 +64,6 @@ const FAQ: React.FC = () => {
 const HomePage: React.FC = () => {
   return (
     <div className="home-container">
-      {/* Hero Section */}
       <header className="hero">
         <h1>Welcome to BudgetSync...</h1>
         <p className="tagline">
@@ -86,7 +85,6 @@ const HomePage: React.FC = () => {
         </Link>
       </header>
 
-      {/* Services Section */}
       <div id="services">
         <div className="box" id="b1">
           <h2 className="h-secondary center">About Us</h2>
@@ -158,7 +156,6 @@ const HomePage: React.FC = () => {
           </ul>
         </div>
       </div>
-      {/* Testimonials Section */}
       <section className="testimonials">
         <h2>What Our Users Say</h2>
         <div className="reviews-container">
@@ -186,7 +183,6 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
       <section className="cta-section">
         <h2>Ready to Take Control of Your Finances?</h2>
         <p>
@@ -198,11 +194,8 @@ const HomePage: React.FC = () => {
           Sign Up Now
         </Link>
       </section>
-
-      {/* FAQ Section */}
       <FAQ />
 
-      {/* Quick Links Section */}
       <section className="quick-links">
         <h2>Explore BudgetSync</h2>
         <div className="home-links">

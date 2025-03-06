@@ -1,14 +1,13 @@
-// verifyotp
-import React, { useState ,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./auth.css";
+import "./CSS_primary/auth.css";
 
 const VerifyOTP: React.FC = () => {
   const [otp, setOtp] = useState("");
-  const [Email,setEmail]=useState("");
+  const [Email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
@@ -21,8 +20,8 @@ const VerifyOTP: React.FC = () => {
     }
   }, [navigate]);
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(); 
-    console.log("Verify OTP button clicked"); 
+    e.preventDefault();
+    console.log("Verify OTP button clicked");
     console.log(`${Email}`);
     if (!Email) {
       toast.error("Email not found. Please register again.");
@@ -36,10 +35,13 @@ const VerifyOTP: React.FC = () => {
 
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:5000/api/users/verify-otp", {
-        Email: Email,
-        otp,
-      });
+      const response = await axios.post(
+        "http://localhost:5000/api/users/verify-otp",
+        {
+          Email: Email,
+          otp,
+        }
+      );
       toast.success(response.data.message);
 
       navigate("/login");
@@ -58,13 +60,13 @@ const VerifyOTP: React.FC = () => {
       <h2>Verify OTP</h2>
       <p>Enter the OTP sent to your email</p>
       <form onSubmit={handleSubmit}>
-        <input 
-          type="text" 
-          name="otp" 
-          placeholder="Enter OTP" 
-          value={otp} 
-          onChange={(e) => setOtp(e.target.value)} 
-          required 
+        <input
+          type="text"
+          name="otp"
+          placeholder="Enter OTP"
+          value={otp}
+          onChange={(e) => setOtp(e.target.value)}
+          required
         />
         <button type="submit" disabled={loading}>
           {loading ? "Verifying..." : "Verify OTP"}

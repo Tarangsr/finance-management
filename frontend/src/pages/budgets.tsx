@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./budgets.css";
-import "./budgetsphone.css";
+import "./CSS_primary/budgets.css";
+import "./CSS_primary/budgetsphone.css";
 
 interface Category {
   id: number;
@@ -56,7 +56,10 @@ const BudgetPage: React.FC = () => {
 
     const updatedBudgets: { [key: number]: Budget } = {};
     categories.forEach((category) => {
-      updatedBudgets[category.id] = parsedBudgets[category.id] || { limit: 0, spent: 0 };
+      updatedBudgets[category.id] = parsedBudgets[category.id] || {
+        limit: 0,
+        spent: 0,
+      };
     });
 
     setBudgets(updatedBudgets);
@@ -106,7 +109,13 @@ const BudgetPage: React.FC = () => {
                 <p className="hk">Spent: ₹{budget.spent.toFixed(2)}</p>
                 <p className="hk">
                   Remaining:{" "}
-                  <span className={budget.spent > budget.limit ? "over-budget" : "under-budget"}>
+                  <span
+                    className={
+                      budget.spent > budget.limit
+                        ? "over-budget"
+                        : "under-budget"
+                    }
+                  >
                     ₹{(budget.limit - budget.spent).toFixed(2)}
                   </span>
                 </p>
@@ -116,17 +125,24 @@ const BudgetPage: React.FC = () => {
                     className="progress"
                     style={{
                       width: `${(budget.spent / (budget.limit || 1)) * 100}%`,
-                      backgroundColor: budget.spent > budget.limit ? "red" : "green",
+                      backgroundColor:
+                        budget.spent > budget.limit ? "red" : "green",
                     }}
                   ></div>
                 </div>
 
                 {budget.limit > 0 ? (
-                  <button onClick={() => handleResetBudget(category.id)} className="bhu">
+                  <button
+                    onClick={() => handleResetBudget(category.id)}
+                    className="bhu"
+                  >
                     Reset Budget
                   </button>
                 ) : (
-                  <button onClick={() => handleSetBudget(category.id)} className="bhu">
+                  <button
+                    onClick={() => handleSetBudget(category.id)}
+                    className="bhu"
+                  >
                     Set Budget
                   </button>
                 )}
@@ -136,11 +152,14 @@ const BudgetPage: React.FC = () => {
         </div>
       </div>
       <section className="lastquote">
-          <p>
-            "A wise person should have money in their head, but not in their heart..."
-          </p>
-          <p className="writer">– Inspired by Jonathan Swift and ethical wealth management.</p>
-        </section>
+        <p>
+          "A wise person should have money in their head, but not in their
+          heart..."
+        </p>
+        <p className="writer">
+          – Inspired by Jonathan Swift and ethical wealth management.
+        </p>
+      </section>
     </div>
   );
 };

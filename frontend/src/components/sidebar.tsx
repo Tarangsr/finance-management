@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Home, PieChart, CreditCard, List, User, Menu, X } from "lucide-react";
-import "./sidebar.css";
+import "./CSS_comp/sidebar.css";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -11,14 +11,13 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
   const sidebarRef = useRef<HTMLDivElement>(null);
 
-  // Close sidebar when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (
         sidebarRef.current &&
         !sidebarRef.current.contains(event.target as Node)
       ) {
-        setIsOpen(false); // Close sidebar
+        setIsOpen(false);
       }
     }
 
@@ -33,7 +32,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
 
   return (
     <>
-      {/* Hamburger Icon (Only Show When Sidebar is Closed) */}
       {!isOpen && (
         <button className="sidebar-toggle" onClick={() => setIsOpen(true)}>
           <Menu size={28} />

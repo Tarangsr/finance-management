@@ -1,10 +1,8 @@
 @media screen and (max-width: 1180px) {
-  /* General Styles */
   body {
     font-size: 14px;
   }
 
-  /* Hero Section */
   .hero {
     padding: 40px 15px;
     height: auto;
@@ -24,7 +22,6 @@
     padding: 10px 15px;
   }
 
-  /* Services Section */
   #services,
   #services1 {
     flex-direction: column;
@@ -36,7 +33,6 @@
     margin-bottom: 15px;
   }
 
-  /* Quick Links */
   .home-links {
     flex-direction: column;
     gap: 10px;
@@ -48,7 +44,6 @@
     font-size: 0.9rem;
   }
 
-  /* Testimonials */
   .reviews-container {
     flex-direction: column;
   }
@@ -57,7 +52,6 @@
     width: 90%;
   }
 
-  /* Call to Action */
   .cta-section {
     padding: 30px;
     max-width: 90%;
@@ -71,7 +65,6 @@
     font-size: 1rem;
   }
 
-  /* FAQ */
   .faq-section {
     max-width: 90%;
     padding: 15px;
@@ -81,14 +74,12 @@
     font-size: 1rem;
   }
 
-  /* Background Image */
   .home-container::before {
     top: -300px;
     height: 1800px;
     opacity: 0.3;
   }
 
-  /* Tar Elements */
   .tar {
     font-size: 14px;
   }
@@ -105,17 +96,18 @@
   .sec {
     font-size: 13px;
   }
+  .footer {
+    display: none;
+  }
 }
 
-/* Adjustments for screens less than 613px */
 @media screen and (max-width: 613px) {
-  /* Reduce Font Size */
   body {
     font-size: 12px;
   }
 
   .hero {
-    margin-top: 120px; /* Move hero section lower */
+    margin-top: 120px;
     padding: 30px 10px;
   }
 
@@ -132,23 +124,19 @@
     padding: 8px 12px;
   }
 
-  /* Services */
   .box {
     width: 90%;
   }
 
-  /* Quick Links */
   .home-link {
     font-size: 0.85rem;
     padding: 10px;
   }
 
-  /* Testimonials */
   .test {
     width: 95%;
   }
 
-  /* Call to Action */
   .cta-section {
     padding: 20px;
     max-width: 95%;
@@ -162,7 +150,6 @@
     font-size: 0.9rem;
   }
 
-  /* FAQ */
   .faq-section {
     padding: 10px;
   }
@@ -172,25 +159,22 @@
   }
 }
 
-/* Further Adjustments for screens less than 290px */
 @media screen and (max-width: 290px) {
-  /* Reduce Overall Font Size */
   body {
     font-size: 9px;
   }
 
-  /* Hero Section */
   .hero {
-    margin-top: 170px; /* Move hero section further down */
+    margin-top: 170px;
     padding: 20px 6px;
   }
 
   .hero h1 {
-    font-size: 1.1rem; /* Smaller Heading */
+    font-size: 1.1rem;
   }
 
   .tagline {
-    font-size: 0.6rem; /* Smaller Tagline */
+    font-size: 0.6rem;
   }
 
   .cta-button {
@@ -198,14 +182,12 @@
     padding: 5px 8px;
   }
 
-  /* Services */
   .box {
     width: 98%;
   }
 
-  /* Quick Links */
   .quick-links h2 {
-    font-size: 1.2rem; /* Smaller Heading */
+    font-size: 1.2rem;
   }
 
   .home-link {
@@ -213,9 +195,8 @@
     padding: 6px;
   }
 
-  /* Testimonials */
   .testimonials h2 {
-    font-size: 1.2rem; /* Smaller Heading */
+    font-size: 1.2rem;
   }
 
   .test {
@@ -223,14 +204,13 @@
     padding: 15px;
   }
 
-  /* Call to Action */
   .cta-section {
     padding: 12px;
     max-width: 100%;
   }
 
   .cta-section h2 {
-    font-size: 1.3rem; /* Smaller Heading */
+    font-size: 1.3rem;
   }
 
   .cta-section p {
@@ -242,9 +222,8 @@
     padding: 5px 6px;
   }
 
-  /* FAQ */
   .faq-section h2 {
-    font-size: 1.2rem; /* Smaller Heading */
+    font-size: 1.2rem;
   }
 
   .faq-question {
@@ -252,25 +231,22 @@
   }
 }
 
-/* Extreme Compact Mode for screens < 200px */
 @media screen and (max-width: 200px) {
-  /* Reduce Overall Font Size */
   body {
-    font-size: 5px; /* Extremely small font */
+    font-size: 5px;
   }
 
-  /* Hero Section */
   .hero {
-    margin-top: 200px; /* Move hero section even lower */
+    margin-top: 200px;
     padding: 10px 2px;
   }
 
   .hero h1 {
-    font-size: 0.7rem; /* Extra Small Heading */
+    font-size: 0.7rem;
   }
 
   .tagline {
-    font-size: 0.4rem; /* Ultra Small Tagline */
+    font-size: 0.4rem;
   }
 
   .cta-button {
@@ -278,16 +254,14 @@
     padding: 3px 5px;
   }
 
-  /* Services */
   .box {
     width: 100%;
-    padding: 10px; /* Increased Box Padding */
-    min-height: 120px; /* Ensuring a bigger box size */
+    padding: 10px;
+    min-height: 120px;
   }
 
-  /* Quick Links */
   .quick-links h2 {
-    font-size: 0.8rem; /* Smaller Heading */
+    font-size: 0.8rem;
   }
 
   .home-link {
@@ -295,25 +269,23 @@
     padding: 3px;
   }
 
-  /* Testimonials */
   .testimonials h2 {
-    font-size: 0.8rem; /* Smaller Heading */
+    font-size: 0.8rem;
   }
 
   .test {
     width: 100%;
-    padding: 10px; /* Increased Padding */
-    min-height: 120px; /* Bigger Box */
+    padding: 10px;
+    min-height: 120px;
   }
 
-  /* Call to Action */
   .cta-section {
     padding: 10px;
     max-width: 100%;
   }
 
   .cta-section h2 {
-    font-size: 0.8rem; /* Smaller Heading */
+    font-size: 0.8rem;
   }
 
   .cta-section p {
@@ -325,9 +297,8 @@
     padding: 3px 4px;
   }
 
-  /* FAQ */
   .faq-section h2 {
-    font-size: 0.8rem; /* Smaller Heading */
+    font-size: 0.8rem;
   }
 
   .faq-question {

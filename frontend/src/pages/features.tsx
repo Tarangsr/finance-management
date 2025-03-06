@@ -1,4 +1,3 @@
-// import React from "react";
 import {
   FaChartPie,
   FaMoneyBillWave,
@@ -6,7 +5,8 @@ import {
   FaClipboardList,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import "./features.css";
+import "./CSS_primary/features.css";
+import "./CSS_primary/featuresphone.css";
 
 const Features = () => {
   return (

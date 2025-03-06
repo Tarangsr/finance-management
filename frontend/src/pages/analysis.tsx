@@ -11,11 +11,11 @@ import {
   Pie,
   Cell,
 } from "recharts";
-import "./analysis.css";
+import "./CSS_primary/analysis.css";
 
 const App: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
-  const [isOpen, setIsOpen] = useState(false); // ✅ Fixed: Added useState for Notes Section
+  const [isOpen, setIsOpen] = useState(false);
   console.log(setSidebarOpen);
   const financialData = [
     { name: "Income", users: 2000000000 },
@@ -67,21 +67,6 @@ const App: React.FC = () => {
 
   return (
     <div className="app-container">
-      {/* <div className={`sidebar ${sidebarOpen ? "open" : "closed"}`}>
-        <button className="toggle-btn" onClick={() => setSidebarOpen(!sidebarOpen)}>
-          {sidebarOpen ? "❌" : "➡️"}
-        </button>
-        <ul>
-          <li>Dashboard</li>
-          <li>Records</li>
-          <li>Analysis</li>
-          <li>Budgets</li>
-          <li>Accounts</li>
-          <li>Profile</li>
-          <li>Settings</li>
-        </ul>
-      </div> */}
-
       <div className={`content ${sidebarOpen ? "content-shifted" : ""}`}>
         <section id="home">
           <h1 className="mainheading">Welcome to Analysis Page.....</h1>
@@ -95,7 +80,6 @@ const App: React.FC = () => {
           <p className="writer"> – Warren Buffett</p>
         </section>
 
-        {/* ✅ Fixed: Added missing isOpen useState */}
         <div className="dropdown">
           <button className="dropdown-btn" onClick={() => setIsOpen(!isOpen)}>
             📌 Notes Section {isOpen ? "▲" : "▼"}
@@ -107,7 +91,6 @@ const App: React.FC = () => {
           )}
         </div>
         <div className="charts-container">
-          {/* Pie Chart Row */}
           <div className="chart-row">
             <div className="Piechart2">
               <PieChart width={400} height={400}>

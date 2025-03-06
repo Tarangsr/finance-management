@@ -1,25 +1,23 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom"; // Import useLocation
-import "./navbar.css";
+import { Link, useLocation } from "react-router-dom";
+import "./CSS_comp/navbar.css";
 import AuthButton from "./AuthButton";
 
 const Navbar: React.FC = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const location = useLocation(); // Get current path
+  const location = useLocation();
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    setIsAuthenticated(!!token); // Converts token existence to boolean
+    setIsAuthenticated(!!token);
   }, []);
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* Logo + BudgetSync Name */}
-        <Link to="/" className="navbar-logo">
-          <img src="logo_bs.jpg" alt="Logo" className="logo-img" />
-          <h1 className="logo-text">BudgetSync</h1>
-        </Link>
+        <div className="navbar-logo">
+  
+        </div>
 
         <ul className="nav-links">
           <li>
@@ -91,7 +89,6 @@ const Navbar: React.FC = () => {
               <li>
                 <AuthButton setIsAuthenticated={setIsAuthenticated} />
               </li>{" "}
-              {/* Logout Button */}
             </>
           ) : (
             <>

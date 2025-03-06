@@ -1,6 +1,11 @@
-// app
 import React, { useState, useEffect } from "react";
-import { HashRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
 import Navbar from "./components/navbar";
 import Sidebar from "./components/sidebar";
 import Footer from "./components/footer";
@@ -20,21 +25,18 @@ import "./App.css";
 import VerifyOTP from "./pages/verifyotp";
 import Features from "./pages/features";
 
-
 const App: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
-  // Get current route
   console.log(isLoggedIn);
   const location = useLocation();
-  const isAuthPage = location.pathname === "/login" || location.pathname === "/register";
+  const isAuthPage =
+    location.pathname === "/login" || location.pathname === "/register";
   useEffect(() => {
-    // Check if user is logged in from localStorage
     setIsLoggedIn(localStorage.getItem("isLoggedIn") === "true");
   }, []);
   return (
     <div className="flex h-screen flex-col">
-      {/* Hide Sidebar & Navbar for Auth Pages */}
       {!isAuthPage && (
         <>
           <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
@@ -56,22 +58,19 @@ const App: React.FC = () => {
             <Route path="/terms" element={<TermsOfService />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/verify_otp" element={<VerifyOTP/>}/>
+            <Route path="/verify_otp" element={<VerifyOTP />} />
             <Route path="/register" element={<Register />} />
-            {/* Redirect 404 pages to home */}
             <Route path="/features" element={<Features />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
 
-        {/* Hide Footer for Auth Pages */}
         {!isAuthPage && <Footer />}
       </div>
     </div>
   );
 };
 
-// Wrap App with Router
 const WrappedApp: React.FC = () => (
   <Router>
     <App />
