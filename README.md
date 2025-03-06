@@ -12,40 +12,30 @@ Personal Finance Management is a MERN stack-based web application that helps use
 - **User Profile**: Manage user profile information.
 - **Contact Us**: Get in touch with the support team.
 
-🌐 Hosted Link
-🔗 [Live Demo]( )
+🌐 Github Link
+🔗 https://github.com/Sneha-0208/finance-management
 
 🛠️ Technologies Used
-- **Frontend**: React.js, TypeScript, Vite, Tailwind CSS
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB
-- **State Management**: Context API / Redux (if used)
-- **Authentication**: JWT (if implemented)
-- **Charts & Graphs**: Recharts / Chart.js
-- **Hosting**: GitHub Pages (Frontend), Render / Vercel (Backend)
+Frontend:
+React.js – For building the user interface
+TypeScript – For type safety and maintainability
+CSS – For styling the application
+Recharts – For visualizing financial data with charts
+Backend:
+Node.js – For handling backend logic
+Express.js – For creating API routes
+Database:
+MongoDB – For storing financial records and user data
+Mongoose – For interacting with MongoDB
+Authentication & Security:
+JWT (JSON Web Token) – For user authentication
+bcrypt.js – For password hashing
+State Management:
+Redux Toolkit – For managing application state
+Other Tools & Dependencies:
+Axios – For making API requests
+dotenv – For managing environment variables
 
-🛠 Setup Instructions
-1. Clone the repository:
-   ```
-   git clone https://github.com/Sneha-0208/personal-finance-management.git
-   ```
-2. Navigate to the project folder:
-   ```
-   cd personal-finance-management
-   ```
-3. Install dependencies:
-   ```
-   npm install
-   ```
-4. Start the development server:
-   ```
-   npm run dev
-   ```
-5. To deploy, run:
-   ```
-   npm run build
-   npm run deploy
-   ```
 
 🤝 Contributing
 Feel free to open issues or submit pull requests to improve this project!
