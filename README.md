@@ -18,7 +18,7 @@ Personal Finance Management is a MERN stack-based web application that helps use
 ✔️ **Financial Goal Setting** – Users can set savings goals and track progress.
 
 🌐 Github Link
-🔗 https://github.com/Sneha-0208/finance-management
+🔗(https://github.com/Tarangsr/finance-management)
 
 🛠️ **Technologies Used**
 Frontend:
